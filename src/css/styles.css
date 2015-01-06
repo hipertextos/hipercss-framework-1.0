@@ -1974,15 +1974,13 @@ header, main, footer {
 	position: relative;
 }
 header {
-	border-bottom: thin solid #aaaaaa;
-	border-bottom: thin solid currentColor;
+	border-bottom: thin solid rgba(0,0,0,.4);
 }
 main {
 	background-color: #fcfcfc;
 }
 footer {
-	border-top: thin solid #aaaaaa;
-	border-top: thin solid currentColor;
+	border-top: thin solid rgba(0,0,0,.4);
 }
 
 /* Header Variations */
