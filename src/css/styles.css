@@ -1,5 +1,5 @@
 /* ------------------------- Hipertextos CSS ------------------------- */
-/* Version 0.9 */
+/* Version 1.0 */
 /* General MIT License (MIT) */
 /* Copyright (c) 2014 by Acozar (hipertextos.net) */
 /* Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: */
@@ -1324,6 +1324,9 @@ nav a img, nav a svg {
 	clear: both;
 	display: block;
 	position: inherit;
+}
+#menu .brand {
+	float: left;
 }
 
 /* Nav slider */
@@ -3746,30 +3749,6 @@ div { /* block */ }
 	color: rgba(255,255,255,.8);
 }
 
-/* Borders skins */
-
-header.flat,
-header.glossy,
-.flat header,
-.glossy header,
-footer.flat,
-footer.glossy,
-.flat footer,
-.glossy footer {
-	border-color: currentColor !important;
-}
-header.shading,
-header.depth,
-.shading header,
-.depth header,
-footer.shading,
-footer.depth,
-.shading footer,
-.depth footer {
-	border-color: #fff;
-	box-shadow: 0 0 .1em rgba(0,0,0,.6);
-}
-
 /* SVG skins */
 
 .flat svg {
@@ -4743,61 +4722,6 @@ a[class*='depth'],
 	}
 }
 
-/* Tabs */
-
-.tabs {
-	position: relative;  
-	min-height: 12em;
-	clear: both;
-	margin: 1em 0;
-}
-.tab {
-	float: left;
-}
-
-.tabs .tab label,
-.tabs .tab a {
-	border: thin solid transparent;
-	border-bottom: thin solid #555;
-	cursor: pointer;
-	padding: .5em; 
-	margin-left: -1px; 
-	position: relative;
-    opacity: 0.6;
-	-moz-opacity: 0.6;
-	text-decoration: none;
-}
-
-.tab [type=radio] {
-	display: none;   
-}
-.tab-content,
-.tab-panel {
-	position: absolute;
-	top: 1.8em;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	padding: 1em;
-	overflow: hidden;
-}
-.tab-content > * {
-	display: none;
-}
-.tab [type=radio]:checked ~ label,
-.tab label.tab-active,
-.tab a.tab-active {
-	border: thin solid #555;
-	border-bottom: thin solid transparent;
-    opacity: 1;
-	-moz-opacity: 1;
-}
-.tab [type=radio]:checked ~ label ~ .tab-content {
-}
-.tab [type=radio]:checked ~ label ~ .tab-content > * {
-	display: block;
-}
-
 /* Overlay */
 
 .overlay {
@@ -4930,19 +4854,39 @@ a[class*='depth'],
 	z-index: 1001;
 }
 
+/* Tabs */
+
+.tabs {
+	display: block;
+	position: relative;
+}
+.tabs ul,
+.tabs li {
+	list-style: none;
+	padding: 0;
+}
+.tabs-control label,
+.tabs-control a {
+	border: thin solid #555;
+	border-bottom: none;
+	cursor:pointer;
+	padding: .25em 1em;
+	text-decoration: none !important;
+}
+.tabs-panel {
+	display: none;
+}
+li .tabs-check:checked ~ .tabs-panel {
+	display: block;
+
+}
+
 /* Carousel */
 
 .carousel ul,
 .carousel li {
 	list-style: none;
 	padding: 0;
-}
-.carousel-box {
-	display: block;
-	position: relative;
-	margin: 1em auto;
-	width: 100%;
-	z-index: 10;
 }
 li .carousel-slide {
 	display: none;

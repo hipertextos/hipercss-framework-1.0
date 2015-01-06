@@ -2,6 +2,10 @@
 
 /* Long life to Free Software */
 
+
+img, div, a, input { 
+	behavior: url('http://code.hipertextos.net/src/css/iepngfix.htc') 
+}
 .headline,
 .title,
 .section-title,
