@@ -340,6 +340,10 @@ address {
     opacity: 0.8;
 	-moz-opacity: 0.8;
 }
+.condensed {
+	line-height: 1em;
+	margin: 0;
+}
 .header-title {
 	line-height: 1em;
 	margin: 0;
