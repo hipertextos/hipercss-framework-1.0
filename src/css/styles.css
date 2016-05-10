@@ -1424,6 +1424,9 @@ nav .toggle {
 		text-align: center;
 		width: 100%;
 	}
+	.nav-inline {
+		overflow-x: auto;
+	}
 	.nav-persist a,
 	.nav-inline a {
 		display: inline;
