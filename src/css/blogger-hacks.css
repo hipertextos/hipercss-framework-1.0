@@ -145,15 +145,13 @@ article .blogger-labels {
 }
 
 .pagination {
-	margin: 3em auto 1em;
+	margin: 2em auto 3em;
 }
 .pagination a {
 	visibility: hidden;
 }
 .pagination a:after {
-	border: thin solid #333;
 	border-radius: 2em;
-	color: #333;
 	font-weight: normal;
 	margin-left: -5em;
 	padding: .75em 1em;
@@ -166,10 +164,14 @@ article .blogger-labels {
 .pagination a:only-child:after {
 	content: ' Anterior >';
 }
+.pagination a:after,
+.prev-next .blog-paging-control-container .blog-paging-control:after {
+	background: #000;
+	color: #fff;
+}
 .pagination a:hover:after,
 .prev-next .blog-paging-control-container .blog-paging-control:hover:after {
 	background: #3AB16C;
-	border: thin solid #eee;
 	color: #fff;
 }
 .pagination a:visited:hover:after,
